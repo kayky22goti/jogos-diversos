@@ -83,6 +83,46 @@
                 width: 45%;
             }
         }
+
+        /* Estilo do formulário */
+        form {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e84118;
+        }
     </style>
 </head>
 <body>
@@ -128,78 +168,37 @@
 
     <section id="contato">
         <h2>📧 Contato</h2>
-        <p>Envie suas sugestões ou dúvidas para: <strong>contato@mundodosjogos.com</strong></p>
+        <p>Envie suas sugestões ou dúvidas através do formulário abaixo:</p>
+
+        <!-- Formulário de contato com validação -->
+        <form action="#" method="post">
+            <label for="telefone">Telefone:</label>
+            <input 
+                type="tel" 
+                id="telefone" 
+                name="telefone" 
+                placeholder="(11) 91234-5678" 
+                pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" 
+                title="Digite um telefone válido, ex: (11) 91234-5678" 
+                required
+            >
+
+            <label for="email">E-mail:</label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="seuemail@exemplo.com" 
+                required
+            >
+
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
     <footer>
         <p>&copy; 2025 Mundo dos Jogos. Todos os direitos reservados.</p>
     </footer>
 
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulário de Contato</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 400px;
-      margin: 50px auto;
-    }
-
-    label {
-      display: block;
-      margin-top: 15px;
-    }
-
-    input {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      box-sizing: border-box;
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 10px;
-      width: 100%;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #0056b3;
-    }
-  </style>
-</head>
-<body>
-
-  <h2>Formulário de Contato</h2>
-
-  <form action="#" method="post">
-    <!-- Campo de telefone -->
-    <label for="telefone">Telefone:</label>
-    <input 
-      type="tel" 
-      id="telefone" 
-      name="telefone" 
-      placeholder="(11) 91234-5678" 
-      pattern="\(?\d{2}\)?\s?\d{4,5}-?\d{4}" 
-      title="Digite um telefone válido, ex: (11) 91234-5678" 
-      required
-    >
-
-    <!-- Campo de e-mail -->
-    <label for="email">E-mail:</label>
-    <input 
-      type="email" 
-      id="email" 
-      name="email" 
-      placeholder="seuemail@exemplo.com" 
-      required
-    >
-
-    <button type="submit">Enviar</button>
-  </form>
 </body>
 </html>
